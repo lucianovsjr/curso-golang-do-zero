@@ -19,4 +19,9 @@
 ## install
 * Parecido com o build. Gera o binário mas salva o arquivo na raiz do Go.
 * Remove o build gerado caso tenha rodado o comando `go build`.
-cd
+
+## Pacote externo
+* "go.mod" irá fazer o gerenciamento de dependências.
+* Install: `go get github.com/badoux/checkmail`.
+* O arquivo "go.mod" não é para ser alterado manualmente, as alterações deve ser realizadas através dos comando do Go.
+* `go mod tidy` Remove todas as dependências que não estão sendo utilizadas
