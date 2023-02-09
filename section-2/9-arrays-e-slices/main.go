@@ -50,4 +50,22 @@ func main() {
 	array2[1] = "Changed position"
 	fmt.Println(array2)
 	fmt.Println(slice3)
+
+	// Array interno
+	// make: Alocar um espaço na memoria para algo do nosso programa
+	slice4 := make([]float32, 10, 11)             // algo, tamanho, capacidade
+	fmt.Println(slice4, len(slice4), cap(slice4)) // len tamanho, cap capacidade
+
+	slice4 = append(slice4, 5)
+	fmt.Println(slice4, len(slice4), cap(slice4))
+
+	// Quando vai estourar, Go cria um novo slice com o dobro do tamanho
+	slice4 = append(slice4, 5)
+	fmt.Println(slice4, len(slice4), cap(slice4))
+
+	// Quando a capacidade não é especifica, é assumido o tamanho
+	slice5 := make([]float32, 5)
+	fmt.Println(slice5, len(slice5), cap(slice5))
+	slice5 = append(slice5, 5)
+	fmt.Println(slice5, len(slice5), cap(slice5))
 }
